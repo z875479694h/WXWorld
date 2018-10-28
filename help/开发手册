@@ -1,0 +1,45 @@
+access_Token：TokenThread.accessToken.getToken()
+
+
+
+/*if(content.equals("晚安")||content.equals("说晚安")) {
+            		respContent="晚安活动规则:\r\n" + 
+            				"欢迎来到寻愿部落参与\r\n" + 
+            				"陌生人，晚安！\r\n" + 
+            				"编辑你想说的内容，加上“晚安”两字，再加自己的微信号（可不加），发送给我们，就会收到一条晚安信息，每个人每天只限两条，禁止涉及骂人涉黄等敏感词语，否则拉黑并曝光，谢谢！！\r\n" +  
+            				"例子:\r\n" + 
+            				"薛之谦，我真的好喜欢你，晚安\r\n" + 
+            				"xzqwtman123456789"+
+            				"\r\n"+
+            				"如果您觉得本次活动好玩的，转发出去让很多人参与进来，我们会不断跟新玩法。";
+            		// 设置文本消息的内容
+                    textMessage.setContent(respContent);
+                    // 将文本消息对象转换成xml
+                    respXml = MessageUtil.messageToXml(textMessage);
+            	}else if(content.indexOf("晚安")>-1&&content.length()<300&&content.length()>3) {
+            		GoodNight good=new GoodNight();
+            		respContent=good.accessGoodNight(fromUserName,content);
+            		if(respContent==null)respContent="参与活动失败请联系工作人员";
+            		// 设置文本消息的内容
+                    textMessage.setContent(respContent);
+                    // 将文本消息对象转换成xml
+                    respXml = MessageUtil.messageToXml(textMessage);
+            	}*/
+            	if(content.equals("听秘密")||content.equals("秘密")) {
+            		respContent="秘密活动规则:\r\n" + 
+            				"欢迎来到寻愿部落参与\r\n" + 
+            				"我有个小秘密跟你说\r\n" + 
+            				"编辑你想说的内容，加上“我的秘密”四个字，再加自己的微信号（可不加），发送给我们，就会收到一条别人的秘密，每个人每天只限三条，禁止涉及骂人涉黄等敏感词语，否则拉黑并曝光，谢谢！！\r\n" + 
+            				"例子:\r\n" + 
+            				"我的秘密:我爱寻愿部落，如果你也爱我，请加我微信\r\n" + 
+            				"xzqwtman123456789\r\n" + 
+            				"\r\n" + 
+            				"如果您觉得本次活动好玩的，转发出去让很多人参与进来，我们会不断更新玩法。";
+            		// 设置文本消息的内容
+                    textMessage.setContent(respContent);
+                    // 将文本消息对象转换成xml
+                    respXml = MessageUtil.messageToXml(textMessage);
+                    }else if(content.indexOf("我的秘密")>-1&&content.length()<300&&content.length()>6) {
+            		Secret good=new Secret();
+            		respContent=good.accessGoodNight(fromUserName,content);
+            		if(respContent==null) {respContent="参与活动失败请联系工作人员";}
